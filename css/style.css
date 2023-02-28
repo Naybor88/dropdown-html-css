@@ -1,0 +1,239 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Regular.woff') format('woff'),
+        url('../fonts/Lato-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?2jpdd7');
+    src:  url('../fonts/icomoon.eot?2jpdd7#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?2jpdd7') format('truetype'),
+      url('../fonts/icomoon.woff?2jpdd7') format('woff'),
+      url('../fonts/icomoon.svg?2jpdd7#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-linkedin:before {
+    content: "\e904";
+    color: #0077b5;
+  }
+  .icon-twitter:before {
+    content: "\e900";
+    color: #1da1f2;
+  }
+  .icon-google:before {
+    content: "\e901";
+    color: #4285f4;
+  }
+  .icon-facebook:before {
+    content: "\e902";
+    color: #1877f2;
+  }
+  .icon-instagram1:before {
+    content: "\e903";
+    color: #e4405f;
+  }
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font: 300 16px/20px 'Lato', sans-serif;
+    color: black;
+    background: #fff;
+    margin: 0;
+}
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.nav {
+    background: #333333;
+    border: solid #009efe;
+    border-width: 0 0 5px;
+}
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-link {
+    display: block;
+    padding: 20px;
+    color: #CACACA;
+}
+.nav-item:hover .nav-link,
+.nav-link:hover {
+    color: #fff;
+    background: #009efe;
+}
+.nav-item.has-drop .nav-link::after {
+    content: '+';
+    padding: 0 5px;
+    position: absolute;
+}
+.nav-item {
+    position: relative;
+}
+.nav-item::after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.drop-down {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 5px 0 0 0;
+    margin: 0;
+    background: #009efe;
+    width: 210px;
+    transform: translateY(600%);
+    transition: .3s all ease-in;
+    opacity: 0;
+    pointer-events: none;
+}
+.nav-item:hover .drop-down {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+.drop-item {
+    position: relative;
+}
+.drop-link {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    background: #009efe;
+    border: 1px solid #0384EF;
+}
+.drop-link::after {
+    content: '+';
+    padding: 0 5px;
+    position: absolute;
+    left: 90%;
+}
+.drop-item:hover .drop-link,
+.drop-link:hover {
+    background: #04a9ff;
+}
+.subdrop-down {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #009efe;
+    width: 210px;
+    transform: translateX(500%);
+    transition: .3s all ease-in;
+    opacity: 0;
+}
+.drop-item:hover .subdrop-down {
+    transform: translateX(0);
+    opacity: 1;
+}
+.subdrop-link {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    background: #009efe;
+    border: 1px solid #0384EF;
+}
+.subdrop-link:hover {
+    background: #04a9ff;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.content-title {
+    font-size: 30px;
+}
+.content-link {
+    padding: 15px 30px;
+    background: #333333;
+    color: #fff;
+    margin: 50px;
+    border: 2px solid #333333;
+}
+.content-link:hover {
+    background: #fff;
+    color: #333333;
+}
+.social {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin: 0;
+    padding: 35px 0 35px 0;
+}
+.social-item {
+    list-style: none;
+    transition: all .2s ease-in-out;
+}
+.social-img {
+    line-height: 30px;
+    font-size: 30px;
+}
+.social-img::before{
+    color: #fff;
+    transition: 0.3s all ease-in-out;
+}
+.social-item:hover {
+    transform: translateY(-5px);
+}
+.footer {
+    background: #333333;
+}
+.icon-linkedin:hover::before {
+    color: #0077b5;
+}
+.icon-twitter:hover::before {
+    color: #1da1f2;
+}
+.icon-instagram1:hover::before {
+    color: #e4405f;
+}
+.icon-facebook:hover::before {
+    color: #1877f2;
+}
+.icon-google:hover::before {
+    color: #4285f4;
+}
